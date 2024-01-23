@@ -1,0 +1,36 @@
+:root {
+  --foreground-rgb: 50, 41, 11;
+  --background-start-rgb: 225, 225, 209;
+  --background-end-rgb: 225, 225, 209;
+
+  --foreground-subtext-rgb: 89, 82, 55;
+
+  --footer-rgb: 238, 238, 228;
+  --footer-foreground-rgb: 206, 205, 187;
+
+  --element-size: 4rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 205, 214, 244;
+    --background-start-rgb: 30, 30, 46;
+    --background-end-rgb: 30, 30, 46;
+
+    --foreground-subtext-rgb: 166, 173, 200;
+
+    --footer-rgb: 17, 17, 27;
+    --footer-foreground-rgb: 49, 50, 68;
+  }
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(var(--background-start-rgb));
+}
