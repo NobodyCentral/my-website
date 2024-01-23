@@ -7,8 +7,6 @@
 
   --footer-rgb: 238, 238, 228;
   --footer-foreground-rgb: 206, 205, 187;
-
-  --element-size: 4rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,5 +30,17 @@
 }
 
 body {
-  background-color: rgb(var(--background-start-rgb));
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
 }

@@ -1,0 +1,87 @@
+#menu {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.menuitem {
+  color: rgb(var(--foreground-rgb));
+  font-size: clamp(2rem, 5vw, 24rem);
+  user-select: none;
+  
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+  
+  transition: opacity 500ms ease, margin-left 500ms ease;;
+}
+
+#menuitems {
+  margin-left: clamp(2rem, 5vw, 24rem);
+  
+  position: relative;
+  z-index: 2;
+}
+
+#bgpattern {
+  width: 100%;
+  height: 100%;
+  
+  background-image:
+  radial-gradient(
+  rgba(var(--foreground-rgb), 0.1) 9%,
+  transparent 9%
+  );
+  background-position: 0% 0%;
+  background-size: 5.5vmin 5.5vmin;
+  
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  
+  transition: opacity 500ms ease, background-size 500ms ease, background-position 500ms ease;
+}
+
+#menuitems:hover > .menuitem {
+  opacity: 0.5;
+}
+
+#menuitems:hover > .menuitem:hover {
+  opacity: 1;
+  margin-left: clamp(1rem, 2.5vw, 12rem);
+}
+
+#menuitems:hover ~ #bgpattern {
+  background-size: 5vmin 5vmin;
+  opacity: 0.5;
+}
+
+#menu[data-active-index='0'] > #bgpattern {
+  background-position: 0% 0%;
+}
+
+#menu[data-active-index='1'] > #bgpattern {
+  background-position: 0% -25%;
+}
+
+#menu[data-active-index='2'] > #bgpattern {
+  background-position: 0% -50%;
+}
+
+#menu[data-active-index='3'] > #bgpattern {
+  background-position: 0% -75%;
+}
+
+#logo {
+  display: flex;
+  align-items: baseline;
+  position: absolute;
+  top: clamp(2rem, 5vw, 24rem);
+  margin-left: clamp(2rem, 5vw, 24rem);
+}
+
+#logo h1 {
+  font-size: clamp(1rem, 2.5vw, 12rem);
+}

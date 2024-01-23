@@ -1,0 +1,51 @@
+#header {
+    position: absolute;
+
+    z-index: 10;
+
+    width: 100%;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: clamp(2rem, 5vw, 24rem);
+
+    user-select: none;
+}
+
+#main > #logo {
+    display: flex;
+    align-items: baseline;
+}
+
+#main > #logo > #logotxt {
+    font-size: clamp(1rem, 2.5vw, 12rem);
+}
+
+#main > #logo > .spacer {
+    margin: clamp(0.5vw, 0.5vw, 0.5vw);
+
+    font-size: clamp(0.5rem, 1.125vw, 6rem);
+
+    opacity: 0.75;
+}
+
+#main > #logo > #redirect {
+    cursor: pointer;
+
+    font-size: clamp(0.5rem, 1.125vw, 6rem);
+    opacity: 0.75;
+
+    transition: opacity 500ms ease;
+}
+
+#main > #logo > #redirect:hover {
+    opacity: 0.5;
+}
+
+#main > #pagename {
+    font-size: clamp(1rem, 2.5vw, 12rem);
+}
