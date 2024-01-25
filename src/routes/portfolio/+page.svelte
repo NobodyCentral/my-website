@@ -14,7 +14,7 @@
 
 
 <svelte:head>
-    <title>~/index - nbdy-cntrl.dev</title>
+    <title>~/portfolio - nbdy-cntrl.dev</title>
 </svelte:head>
 
 
@@ -22,7 +22,7 @@
     <Navbar bind:showMenu={$showMenu} />
 
     <div id="content">
-        <Director />
+        <Portfolio />
 
         <Menu bind:showMenu={$showMenu} />
     </div>
@@ -32,13 +32,13 @@
 
 
 <script>
-    import { theme, showMenu } from '../stores.js';
+    import { theme, showMenu } from '../../stores.js';
 
     import Navbar from '$lib/components/Navbar.svelte';
     import Menu from '$lib/components/Menu.svelte';
     import Footer from '$lib/components/Footer.svelte';
 
-    import Director from '$lib/pages/Director.svelte';
+    import Portfolio from '$lib/pages/Portfolio.svelte';
 
     import { onMount } from 'svelte';
 

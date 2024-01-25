@@ -14,7 +14,7 @@
 
 
 <svelte:head>
-    <title>~/index - nbdy-cntrl.dev</title>
+    <title>~/error - nbdy-cntrl.dev</title>
 </svelte:head>
 
 
@@ -22,7 +22,7 @@
     <Navbar bind:showMenu={$showMenu} />
 
     <div id="content">
-        <Director />
+        <Error status={$page.status} error={$page.error.message} />
 
         <Menu bind:showMenu={$showMenu} />
     </div>
@@ -38,8 +38,9 @@
     import Menu from '$lib/components/Menu.svelte';
     import Footer from '$lib/components/Footer.svelte';
 
-    import Director from '$lib/pages/Director.svelte';
+    import Error from '$lib/pages/Error.svelte';
 
+    import { page } from '$app/stores';
     import { onMount } from 'svelte';
 
 
