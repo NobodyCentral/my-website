@@ -34,7 +34,7 @@
 
         z-index: 1;
 
-        background-image: url('https://source.unsplash.com/random/1920x1080/?mountains,landscape,lake,forest,night,stars,river,castle,galaxy,space,nebula');
+        background-image: url('https://source.unsplash.com/random/1920x1080/?mountains,landscape,lake,forest,night,stars,river,castle');
 
 		background-size: 100%; 
 		background-position: 0% 50%;
