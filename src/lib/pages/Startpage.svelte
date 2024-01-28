@@ -116,14 +116,12 @@
 
         background-image: url('https://source.unsplash.com/random/1920x1080/?mountains,landscape,lake,forest,night,stars,river,castle');
 
-		background-size: 100%; 
+		background-size: Scale(100%, 100%);
 		background-position: 0% 50%;
 		filter: blur(15px);
     }
 
     #link-grid {
-        min-width: 24rem;
-
         padding: 2.5%;
 
         display: grid;
@@ -144,7 +142,7 @@
 
         filter: drop-shadow(0 0 0.5rem rgb(var(--bg)));
 
-        font-size: clamp(0.5rem, 1.25vw, 6rem);
+        font-size: clamp(1rem, 1.25vw, 6rem);
         font-weight: bold;
         text-align: center;
     }
@@ -154,7 +152,7 @@
 
         filter: drop-shadow(0 0 0.5rem rgb(var(--bg)));
 
-        font-size: clamp(.5rem, 1vw, 6rem);
+        font-size: clamp(.75rem, 1vw, 6rem);
         text-align: center;
     }
 
@@ -162,7 +160,7 @@
         white-space: nowrap;
         list-style-type: none;
 
-        font-size: clamp(0.5rem, 1vw, 6rem);
+        font-size: clamp(0.75rem, 1vw, 6rem);
     }
 
     .link-list h1 {
@@ -172,7 +170,7 @@
 
         filter: drop-shadow(0 0 0.5rem rgb(var(--bg)));
 
-        font-size: clamp(0.5rem, 1.25vw, 6rem);
+        font-size: clamp(1rem, 1.25vw, 6rem);
     }
 
     .link-list li {

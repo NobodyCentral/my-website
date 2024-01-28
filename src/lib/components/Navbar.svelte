@@ -19,7 +19,7 @@
         margin-left: clamp(2rem, 5vw, 24rem);
         margin-right: clamp(2rem, 5vw, 24rem);
 
-        font-size: clamp(0.5rem, 1.25vw, 6rem);
+        font-size: clamp(1.25rem, 1.25vw, 6rem);
     }
 
     nav a {

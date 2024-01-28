@@ -27,6 +27,26 @@
         opacity: 1;
     }
 
+    @media (max-width: 1024px) {
+        #menu {
+            width: 25%;
+        }
+
+        #menu[showMenu='true'] {
+            transform: translate(calc(100vw - calc(0.25 * 100vw)), 0);
+        }
+    }
+
+    @media (max-width: 512px) {
+        #menu {
+            width: 50%;
+        }
+
+        #menu[showMenu='true'] {
+            transform: translate(calc(100vw - calc(0.50 * 100vw)), 0);
+        }
+    }
+
     #theme-switcher {
         height: max-content;
 
