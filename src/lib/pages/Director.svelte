@@ -7,51 +7,6 @@
         flex-direction: row;
     }
 
-    #background-effect {
-        position: absolute;
-
-        width: 100%;
-        height: 100%;
-
-        z-index: 2;
-
-        background-image:
-        radial-gradient(rgba(var(--fg), 0.1) 9%, transparent 9%);
-        background-position: 0% 0%;
-        background-size: 10vmin 10vmin;
-
-		transition: opacity 250ms ease, background-size 500ms ease, background-position 500ms ease;
-    }
-
-    #background {
-        position: absolute;
-
-        width: 100%;
-        height: 100%;
-
-        display: inline-flex;
-
-        z-index: 1;
-
-        background-image: url('https://source.unsplash.com/random/1920x1080/?mountains,landscape,lake,forest,night,stars,river,castle');
-
-		background-position: 0% 50%;
-        background-size: Scale(100%, 100%);
-		filter: blur(15px);
-    }
-
-    #director[hoverIndex='0'] #background-effect {
-        background-position: 0% 50%;
-    }
-
-    #director[hoverIndex='1'] #background-effect {
-        background-position: 0% 25%;
-    }
-
-    #director[hoverIndex='2'] #background-effect {
-        background-position: 0% 0%;
-    }
-
     #main {
         position: relative;
 
@@ -102,21 +57,28 @@
 </style>
 
 
-<div id='director' hoverIndex={hoverIndex}>
+<div id='director'>
     <div id='main'>
-        <a class='menu-item' href="/portfolio" hoverIndex=0 on:mouseover={hover} on:focus={hover}>Portfolio</a>
-        <a class='menu-item' href="/weather" hoverIndex=1 on:mouseover={hover} on:focus={hover}>Weather</a>
-        <a class='menu-item' href="/startpage" hoverIndex=2 on:mouseover={hover} on:focus={hover}>Startpage</a>
+        <a class='menu-item' href="/portfolio" hoverIndex=0 on:mouseover={hover} on:focus={hover} on:mouseleave={leave}>Portfolio</a>
+        <a class='menu-item' href="/weather" hoverIndex=-25 on:mouseover={hover} on:focus={hover} on:mouseleave={leave}>Weather</a>
+        <a class='menu-item' href="/startpage" hoverIndex=-50 on:mouseover={hover} on:focus={hover} on:mouseleave={leave}>Startpage</a>
     </div>
 
-    <div id='background-effect'></div>
-    <div id='background'></div>
+    <Background hoverIndex={hoverIndex} offset={0} size={size} />
 </div>
 
 
 <script>
+    import Background from '../components/Background.svelte';
+
     let hoverIndex = 0;
+    let size = 10;
     function hover(e) {
         hoverIndex = e.target.getAttribute('hoverIndex');
+        size = 7.5;
+    }
+
+    function leave(e) {
+        size = 10;
     }
 </script>
